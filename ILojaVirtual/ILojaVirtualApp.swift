@@ -7,11 +7,22 @@
 
 import SwiftUI
 
+
 @main
 struct ILojaVirtualApp: App {
+    
+    @State var vm = AuthVM()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            Group {
+                if true {
+                    LoginView()
+                } else {
+                    MainTabView()
+                }
+            }
+            .environment(vm)
         }
     }
 }
