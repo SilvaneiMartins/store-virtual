@@ -17,15 +17,15 @@ Este aplicativo de e-commerce de nível profissional usando as últimas tecnolog
 
 Recursos que implantei no projeto:
 
-✅ SwiftUI: Interface de usuário impressionante e responsiva com os recursos do iOS 18
-✅ Stripe: Pagamentos seguros e contínuos
-✅ SwiftData: Gerenciamento de dados locais
-✅ Keychain: armazene com segurança dados confidenciais do usuário
-✅ Node.js: crie um backend robusto e escalável
-✅ JWT: Autenticação sólida e segura
-✅ AppWrite: Serviços de nuvem poderosos para armazenar imagens
-✅ Observação: Gerenciamento de estado
-✅ iOS 18: aproveite os recursos de ponta
+    - ✅ SwiftUI: Interface de usuário impressionante e responsiva com os recursos do iOS 18
+    - ✅ Stripe: Pagamentos seguros e contínuos
+    - ✅ SwiftData: Gerenciamento de dados locais
+    - ✅ Keychain: armazene com segurança dados confidenciais do usuário
+    - ✅ Node.js: crie um backend robusto e escalável
+    - ✅ JWT: Autenticação sólida e segura
+    - ✅ AppWrite: Serviços de nuvem poderosos para armazenar imagens
+    - ✅ Observação: Gerenciamento de estado
+    - ✅ iOS 18: aproveite os recursos de ponta
 
 ```bash
     # Clonar o repositório
