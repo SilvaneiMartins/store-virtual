@@ -18,6 +18,31 @@ struct LoginView: View {
         NavigationStack {
             VStack(spacing: 8) {
                 FormField(value: $vmBindable.emailLogin, icon: "envelope.circle", placeholder: "E-mail", validadeState: vmBindable.emailValidStateLogin)
+                
+                FormField(value: $vmBindable.passwordLogin, icon: "lock.circle", placeholder: "Senha", isSecure: true, validadeState: vmBindable.passwordValidStateLogin)
+                
+                Button(action: {
+                    print("login")
+                }) {
+                    Text("Entrar")
+                        .buttonTextModifier()
+                }
+                .disabled(vmBindable.isValidLogin ? false : true)
+                
+                
+                NavigationLink(destination: ForgotPasswordView()) {
+                    NavLink(text: "Esqeuceu a senha?", subText: "Recuperar")
+                }
+
+            }
+            .padding(.horizontal, 32)
+            .navigationTitle("Login")
+            .navigationBarBackButtonHidden(true)
+            
+            Spacer()
+            
+            NavigationLink(destination: RegisterView()) {
+                NavLink(text: "Não tem conta?", subText: "Criar")
             }
         }
     }
