@@ -36,7 +36,7 @@ struct LoginView: View {
 
             }
             .padding(.horizontal, 32)
-            .navigationTitle("Login")
+            .navigationTitle("Entrar")
             .navigationBarBackButtonHidden(true)
             
             Spacer()

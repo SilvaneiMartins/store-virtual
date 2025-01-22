@@ -24,15 +24,22 @@ struct RegisterView: View {
             FormField(value: $vmBindable.passwordRegister, icon: "lock.circle", placeholder: "Senha", isSecure: true, validadeState: vmBindable.passwordValidStateRegister)
             
             Button(action: {
-                
+                print("cadastro")
             }) {
                 Text("Registrar")
+                    .buttonTextModifier()
             }
-            .disabled(vmBindable.isValidRegister ? false: true)
+            .disabled(vmBindable.isValidRegister ? false : true)
         }
         .padding(.horizontal, 32)
         .navigationBarBackButtonHidden(true)
         .backButtonModifier(dismiss: dismiss)
+        
+        Spacer()
+        
+        NavigationLink(destination: ForgotPasswordView()) {
+            NavLink(text: "Esqueceu a senha?", subText: "Recuperar")
+        }.navigationTitle("Cadastro")
     }
 }
 
