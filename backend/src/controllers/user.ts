@@ -1,8 +1,8 @@
 import bcrypt from "bcrypt";
 import { Request, Response } from "express";
 
-import User from "@src/models/user";
-import { validationEmail, validateLength } from "@src/utils/validation";
+import User from "../models/user";
+import { validationEmail, validateLength } from "../utils/validation";
 
 export const register = async (req: Request, res: Response): Promise<void> => {
     try {
