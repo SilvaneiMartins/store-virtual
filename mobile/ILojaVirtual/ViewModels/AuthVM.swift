@@ -22,6 +22,10 @@ class AuthVM {
     
     var nameValidStateRegister: ValidateState = .empty
     
+    var alertTitle = ""
+    var alertMessage = ""
+    var showAlert: Bool = false
+    
     var emailLogin = "" {
         didSet {
             emailValidStateLogin = emailLogin.isEmpty ? .empty : (isValidEmail(emailLogin) ? .valid : .invalid)
@@ -74,5 +78,41 @@ class AuthVM {
     
     func updateValidForgot() {
         isValidForgot = emailValidStateForgot == .valid
+    }
+    
+    func register(name: String, email: String, password: String) async throws -> ValidateResponse {
+        guard let url = URL(string: "\(baseURL)/register") else {
+            return ValidateResponse(message: "URL incorreta")
+        }
+        
+        let registerRequest = RegisterRequest(email: email, password: password, name: name)
+        
+        let requestBody: Data
+        
+        do {
+            requestBody = try JSONEncoder().encode(registerRequest)
+        } catch {
+            throw NetworkError.invalidData
+        }
+        
+        do {
+            let (authResponse, httpResponse) = try await HTTPClient.shared.httpRequest(url: url, method: .POST, body: requestBody) as (ValidateResponse, HTTPURLResponse)
+            
+            if (200...299).contains(httpResponse.statusCode) {
+                alertTitle = "Sucesso!"
+                alertMessage = authResponse.message ?? ""
+                return ValidateResponse(message: authResponse.message)
+            } else {
+                alertTitle = "Error"
+                alertMessage = authResponse.message ?? ""
+                showAlert = true
+                throw NetworkError.invalidResponse
+            }
+        } catch {
+            alertTitle = "Error"
+            alertMessage = "Falha na comunicação de rede"
+            showAlert = true
+            throw NetworkError.invalidResponse
+        }
     }
 }

@@ -10,9 +10,22 @@
 		3117AF3C2D3ED6E70033EB17 /* ILojaVirtual.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ILojaVirtual.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		31F3419A2D41C1D500797C45 /* Exceptions for "ILojaVirtual" folder in "ILojaVirtual" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 3117AF3B2D3ED6E70033EB17 /* ILojaVirtual */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		3117AF3E2D3ED6E70033EB17 /* ILojaVirtual */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				31F3419A2D41C1D500797C45 /* Exceptions for "ILojaVirtual" folder in "ILojaVirtual" target */,
+			);
 			path = ILojaVirtual;
 			sourceTree = "<group>";
 		};
@@ -255,6 +268,7 @@
 				DEVELOPMENT_TEAM = MRWW7972SX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ILojaVirtual/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "ILoja Virtual";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -284,6 +298,7 @@
 				DEVELOPMENT_TEAM = MRWW7972SX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ILojaVirtual/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "ILoja Virtual";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

@@ -61,3 +61,5 @@ struct BackButtonModifier: ViewModifier {
             }
     }
 }
+
+let baseURL = "http://192.168.0.94:4000"
